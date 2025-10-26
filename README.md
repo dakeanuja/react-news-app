@@ -28,27 +28,6 @@ You can get a free key from https://newsapi.org
 npm start
 The app will run at http://localhost:3000
 
-# Folder Structure
-src/
-│
-├── components/
-│   ├── NewsComponent.js        # Main news display logic
-│   ├── NewsItem.js             # Single news card
-│   ├── Favourite.js            # Favorites list
-│   ├── NavBar.js               # Navigation bar + Theme toggle
-│   ├── AboutUs.js              # About page
-│   ├── routes/Layout.js        # Shared layout (Nav + Outlet)
-│   └── theme/ThemeContext.js   # Light/Dark theme context
-│
-├── services/
-│   └── newsServices.js         # API call logic
-│
-├── assets/                     # Images (e.g., no_news_found.jpg)
-├── App.js
-├── index.js
-├── index.css                   # Global + Theme styles
-└── NewsComponent.css           # Card & layout styling
-
 # Dark & Light Theme
 Controlled via a ThemeContext
 Uses data-theme on <body> for easy CSS customization
