@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# NewsApp
+A modern React News Application that fetches live news from a public API.
+It supports infinite scrolling, favorites, offline detection, and light/dark themes for a smooth reading experience.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Features
+1. Top headlines & category filtering (Business, Entertainment, Sports, Health, Science, Technology)
+   
+2. Search news by keyword
 
-## Available Scripts
+3. Add/remove favorites (saved in localStorage)
+ 
+4. Infinite scrolling for seamless news loading
+  
+5. Offline detection banner (alerts when connection is lost)
+   
+6. Responsive design using Bootstrap
+    
+7. Light / Dark mode toggle with persistent theme
+    
+8. Toast notifications for user feedback
 
-In the project directory, you can run:
+# Installation & Setup
+1️. Clone the repository
+   - git clone https://github.com/your-username/news-app.git
+   - cd news-app
 
-### `npm start`
+2️. Install dependencies
+   - npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3️. Create a .env file for your News API key
+   - REACT_APP_NEWS_API_KEY=your_api_key_here
+   - You can get a free key from https://newsapi.org
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4️. Start the app
+  - npm start
+  - The app will run at http://localhost:3000
 
-### `npm test`
+# Dark & Light Theme
+Controlled via a ThemeContext
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Uses data-theme on <body> for easy CSS customization
 
-### `npm run build`
+Automatically persists the selected theme in localStorage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Favorites Feature
+Users can click ⭐ to save/un-save an article.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Favorites are stored locally (localStorage), so they persist even after page refresh.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# API Usage & Limits
 
-### `npm run eject`
+This project uses the NewsAPI.org free tier, which limits to 100 articles per request and 1,000 requests/day.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+If you see this error:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+"code": "maximumResultsReached"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+→ That means the API free limit was reached.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can upgrade to a paid plan or use a mock API for testing.
